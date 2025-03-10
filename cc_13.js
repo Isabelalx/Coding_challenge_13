@@ -48,3 +48,14 @@ addEmployeeCard("Emma Smith", "Project Manager") // Calling the function to add 
      card.style.border = "2px solid navy";
  })
  
+ // Task 4: Implementing Removal of Employee Cards with Event Bubbling
+ // Selecting the employee container 
+ const employeeContainer = document.getElementById('employeeContainer'); 
+ 
+ // Attaching an event listener to the parent container to log when it is clicked
+ employeeContainer.addEventListener("click", (event) => {
+     let card = event.target.closest(".employee-card");
+     if (card) {
+     console.log("Employee Card clicked");
+     }
+ });
